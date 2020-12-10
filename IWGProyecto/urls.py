@@ -17,7 +17,9 @@ from django.contrib import admin
 from django.urls import path
 from IWGProyecto.views import plantilla
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("plantilla/", plantilla ),
+    
 ]

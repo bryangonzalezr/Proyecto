@@ -2,18 +2,27 @@
 <!Doctype html>
 <html>
     <head>
-        <title>Plantilla prueba</title>
+        <title>Super Pong</title>
         <link type='text/css' href='{% static "css/Plantilla.css" %}' rel='stylesheet'/>
+        <script src='{% static "js/jquery-3.5.1.min.js" %}'></script>
+        
     </head>
-    <body>
-        <h1>Prueba gay<h1>
-            <ul id='test'>
-                <li>Esta</li>
-                <li>Es</li>
-                <li>Una</li>
-                <li>Sucia</li>
-                <li>Prueba</li>
-            <ul>
-        <script type='text/javascript' src='{% static "js/hola.js" %}'></script>
+    <script type='text/javascript' src='{% static "js/hola.js" %}'></script>
+    <body style="background-color:#3d3737;">
+     <div id="musica">
+        <audio controls autoplay>
+            <source id="superpong-musica" src='{% static "Musica/musica-superpong.mp3" %}' type="audio/mp3">
+        </audio>
+        <img id="springrod-logo" src='{% static "Imagenes/Logo.png" %}'  alt="springrod-logo"/>
+     </div>
+        <div id="logo" align="center">
+        <img id="superpong-logo" src='{% static "Imagenes/superpong.png" %}'  alt="superpong-logo"/> 
+     </div>  
+     <div id="superpong-container">
+         <button id="Start" align="center" role="button"> Start </button>
+         <button id="Instrucciones" style="display:inline" role="button"> Instrucciones </button>
+     </div>
+        
+        
     </body> 
 </html>
