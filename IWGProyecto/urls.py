@@ -16,10 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from IWGProyecto.views import plantilla
+from IWGProyecto.views import juego
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("plantilla/", plantilla ),
-    
+    path('', juego)
 ]
