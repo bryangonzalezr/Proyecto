@@ -25,7 +25,7 @@ SECRET_KEY = '&4)#vd80wgio(i)+b7_gjamc8&yuko%-+0bb*pkrk3h)$m%)d9'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['bryangonzalezr.pythonanywhere.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -54,7 +54,7 @@ ROOT_URLCONF = 'IWGProyecto.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ["/home/bryangonzalezr/Proyecto/IWGProyecto/Plantillas"],
+        'DIRS': ["C:\IWGProyecto\IWGProyecto\IWGProyecto\Plantillas"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
