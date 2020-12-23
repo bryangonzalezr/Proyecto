@@ -1,9 +1,10 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8">
 
-  <title>Cocos Creator | S_pong_pre__alpha1</title>
+  <title>Cocos Creator | SUPERPONG</title>
 
   <!--http://www.html5rocks.com/en/mobile/mobifying/-->
   <meta name="viewport"
@@ -37,8 +38,8 @@
   <!--<link rel="apple-touch-icon" href=".png" />-->
   <!--<link rel="apple-touch-icon-precomposed" href=".png" />-->
 
-  <link rel="stylesheet" type="text/css" href="style-mobile.6e9cd.css"/>
-  <link rel="icon" href="favicon.8de18.ico"/>
+  <link rel="stylesheet" type="text/css" href='{% static "style-mobile.6e9cd.css"%}'/>
+  <link rel="icon" href='{% static "favicon.8de18.ico"%}'/>
 </head>
 <body>
   <canvas id="GameCanvas" oncontextmenu="event.preventDefault()" tabindex="0"></canvas>
@@ -48,9 +49,9 @@
     </div>
   </div>
 
-<script src="src/settings.f89e7.js" charset="utf-8"></script>
+<script src='{% static "src/settings.efb4e.js" %}' charset="utf-8"></script>
 
-<script src="main.b2f0e.js" charset="utf-8"></script>
+<script src='{% static "main.3c443.js"%}' charset="utf-8"></script>
 
 <script type="text/javascript">
 (function () {
@@ -76,9 +77,9 @@
       document.body.appendChild(domScript);
     }
 
-    loadScript(debug ? 'cocos2d-js.js' : 'cocos2d-js-min.cab18.js', function () {
+    loadScript(debug ? 'cocos2d-js.js' : '{% static "cocos2d-js-min.cab18.js" %}', function () {
       if (CC_PHYSICS_BUILTIN || CC_PHYSICS_CANNON) {
-        loadScript(debug ? 'physics.js' : 'physics-min.b6620.js', window.boot);
+        loadScript(debug ? 'physics.js' : "{% static 'physics-min.b6620.js' %}", window.boot);
       }
       else {
         window.boot();
